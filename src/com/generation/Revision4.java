@@ -1,0 +1,52 @@
+/*Sandra Riverol Ejercicio SA-SEC4 Revisión de código de otros 4 
+Calificación 4 de 5 otorgado por Mariela*/
+
+package com.generation;
+
+import java.util.Scanner;
+
+public class Revision4 {
+
+		public static void main(String[] args) {
+			//Se reformula escaner
+			 Scanner s = new Scanner(System.in); //Se mejora Scanner
+			    
+			    System.out.println("Turno del jugador 1 (introduzca piedra, papel o tijeras): ");
+			    String j1 = s.nextLine();
+			    
+			//Se cambia el output del promt jugador 2
+			    System.out.println("Turno del jugador 2 (introduzca piedra, papel o tijeras): ");
+			//Elimino scanner 2
+			    String j2 = s.nextLine();
+			    
+			//sumo comparacion exacta
+			    if (j1 == j2) {
+			      System.out.println("Empate");
+			    } else {
+			      int g = 2;
+
+			      switch(j1) {
+			        case "piedra":
+			          if (j2 == "tijeras") {
+			            g = 1;
+			          }
+			          break; //Se coloca break
+
+			        case "papel":
+			          if (j2 == "piedra") {
+			            g = 1;}
+				break; //Se coloca break
+			          
+			        case "tijera":
+			          if (j2.equals("papel")) {
+			            g = 1;
+			          }
+			          break; //Se coloca break
+
+			        default:
+			      }
+			      System.out.println("Gana el jugador " + g);
+	 }
+	}
+
+}
